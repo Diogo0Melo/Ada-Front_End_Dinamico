@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./atividade.css" />
+        <script src="./atividade.js" async></script>
+        <title>Validação de Form</title>
+    </head>
+    <body>
+        <form action="./index.html" autocomplete="off">
+            <fieldset>
+                <legend>Validação de Inputs</legend>
+                <label>
+                    Nome
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        minlength="3"
+                        placeholder="Adalberto"
+                        required
+                    />
+                </label>
+                <label>
+                    Email
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="adalvo@tmail.com"
+                        required
+                    />
+                </label>
+                <label>
+                    Senha
+                    <input
+                        type="password"
+                        name="senha"
+                        id="senha"
+                        minlength="8"
+                        maxlength="16"
+                        placeholder="12345678"
+                        required
+                    />
+                </label>
+                <label>
+                    CPF
+                    <input
+                        type="text"
+                        name="cpf"
+                        id="cpf"
+                        placeholder="255.255.255-00"
+                        minlength="11"
+                        maxlength="14"
+                        required
+                    />
+                </label>
+                <label>
+                    Celular
+                    <input
+                        type="tel"
+                        name="celular"
+                        id="celular"
+                        placeholder="(11) 90000-0000"
+                        pattern="^[0-9]{2}[0-9]{8,9}$"
+                        required
+                    />
+                </label>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

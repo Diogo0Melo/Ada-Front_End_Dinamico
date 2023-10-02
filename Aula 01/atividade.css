@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,700;0,900;1,200;1,300;1,400;1,700;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: white;
+}
+:root {
+    font-size: 62.5%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #252428;
+    font-size: 1.6rem;
+}
+form {
+    width: 45%;
+}
+fieldset {
+    position: relative;
+    bottom: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0.6rem double #2300e9;
+    border-radius: 1rem;
+    padding: 2.2rem 4rem;
+}
+label {
+    width: 100%;
+    margin: 1rem 0;
+}
+input {
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background-color: #403e44;
+    margin-top: 0.8rem;
+}
+button {
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    background-color: #2300e9;
+}
+button:hover {
+    background-color: #03016b;
+    transition: 0.3s;
+}
+input.invalid {
+    outline: 0.2rem solid red;
+}
+.invalid::after {
+    content: "Preencha o campo corretamente!";
+    color: red;
+    font-size: 1rem;
+}
+.valid {
+    outline: 0.2rem solid greenyellow;
+}
