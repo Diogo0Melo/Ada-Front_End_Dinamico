@@ -93,4 +93,4 @@ email.addEventListener("input", validarEmail);
 senha.addEventListener("input", validarSenha);
 cpf.addEventListener("input", validarCPF);
 celular.addEventListener("input", validarCelular);
-enviar.addEventListener("click", validarForm);
+enviar.addEventListener("submit", validarForm);
