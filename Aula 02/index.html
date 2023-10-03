@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Form Item Add</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="./script.js" async></script>
+    </head>
+    <body>
+        <div class="container-xl">
+            <div class="alert alert-info mt-2" role="alert">
+                Preencha os campos para adicionar um novo produto!
+            </div>
+            <div class="row">
+                <div class="col-xl mb-4 mb-xl-4">
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="product-name"
+                                placeholder="Nome do Produto"
+                            />
+                            <label for="product-name">Nome do Produto</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">R$</span>
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="product-price"
+                                    placeholder="Preço"
+                                />
+                                <label for="product-price">Preço</label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="form-floating">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="product-sale"
+                                    placeholder="Desconto"
+                                />
+                                <label for="product-sale">Desconto</label>
+                            </div>
+                            <span class="input-group-text">%</span>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="product-amount"
+                                placeholder="Quantidade Disponivel"
+                            />
+                            <label for="product-amount"
+                                >Quantidade Disponivel</label
+                            >
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100 disabled"
+                        >
+                            Adicionar
+                        </button>
+                    </form>
+                </div>
+
+                <div class="col-xl overflow-auto" style="max-height: 334px">
+                    <table class="table">
+                        <thead>
+                            <tr class="table-info text-center">
+                                <th scope="col" colspan="5">Produtos</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col">Desconto</th>
+                                <th scope="col">Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
