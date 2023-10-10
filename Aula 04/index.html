@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fetch API</title>
+    </head>
+    <body>
+        <input type="text" />
+        <button>Buscar</button>
+        <script>
+            const body = document.querySelector("body");
+            const btn = document.querySelector("button");
+            const api = "https://pokeapi.co/api/v2/pokemon";
+            function getPokeImg() {
+                const pokeName = document
+                    .querySelector("input")
+                    .value.toLowerCase();
+                fetch(`${api}/${pokeName}`)
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((response) => {
+                        const pokeImg = response.sprites.front_default;
+                        const imgTag = document.createElement("img");
+                        imgTag.src = pokeImg;
+                        imgTag.style = "display: block;";
+                        body.appendChild(imgTag);
+                    });
+            }
+            btn.addEventListener("click", getPokeImg);
+        </script>
+    </body>
+</html>
